@@ -15,11 +15,27 @@ public class MyFrame extends JFrame
 		setVisible(true);
 	}
 
+	public void paintLine()
+	{
+		panel = new LineDemoPanel();
+		add(panel);
+		setVisible(true);
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		MyFrame frame = new MyFrame("Hello");
+		MyFrame frame = new MyFrame("Line");
+		frame.paintLine();
+		
+		MyFrame frame2 = new MyFrame("Rectangle");
+		frame2.paintRectangle();
 	}
 
+	public void paintRectangle()
+	{
+		panel = new RectangleDemoPanel();
+		add(panel);
+		setVisible(true);
+	}
 }
